@@ -34,23 +34,10 @@
   
                         // ITERATING THROUGH OBJECTS
                         $.each(data, function (key, value) {
-  
-                            //CONSTRUCTION OF ROWS HAVING
-                            // DATA FROM JSON OBJECT
-                            student += '<tr>';
-                            student += '<td>' + 
-                                value.id + '</td>';
-  
-                            student += '<td>' + 
-                                value.name + '</td>';
-  
-                            student += '<td>' + 
-                                value.type + '</td>';
-  
-                            student += '<td>' + 
-                                value.desc + '</td>';
-  
-                            student += '</tr>';
+                          $('#stage').html('<p> id: ' + jd.id+ '</p>');
+                          $('#stage').append('<p> name : ' + jd.name+ '</p>');
+                          $('#stage').append('<p> type: ' + jd.type+ '</p>');
+                          $('#stage').append('<p> desc: ' + jd.desc+ '</p>');
                         });
                           
                         //INSERTING ROWS INTO TABLE 
