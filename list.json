@@ -336,18 +336,6 @@
             "cat": "Muscle"
         },
         {
-            "nom": "Moonbeam",
-            "prix": "23400",
-            "page": "25/59",
-            "cat": "Muscle"
-        },
-        {
-            "nom": "Moonbeam Custom",
-            "prix": "32500",
-            "page": "26/59",
-            "cat": "Muscle"
-        },
-        {
             "nom": "Phoenix",
             "prix": "16250",
             "page": "27/59",
@@ -2280,13 +2268,13 @@
             "cat": "Vans"
         },
         {
-            "nom": "Moonbeam_bis",
+            "nom": "Moonbeam",
             "prix": "23400",
             "page": "12/24",
             "cat": "Vans"
         },
         {
-            "nom": "Moonbeam Custom_bis",
+            "nom": "Moonbeam Custom",
             "prix": "32500",
             "page": "13/24",
             "cat": "Vans"
