@@ -1,4 +1,4 @@
-<html lang="fr">
+<html lang="en">
   
 <head>
     <meta charset="UTF-8">
@@ -53,6 +53,7 @@
 				if (liste[i] != selecNom.value) {
 					hideRow(liste[i]);
 				}
+				else showRow(liste[i]);
 			}
 		}
 		else {
@@ -65,6 +66,10 @@
 	function hideRow(id) {
       var row = document.getElementById(id);
       row.style.display = 'none';
+    }
+	function showRow(id) {
+      var row = document.getElementById(id);
+      row.style.display = '';
     }
 
 	</script>
