@@ -39,6 +39,11 @@
 			event.preventDefault();
 		}
 	});
+	
+	function clear(){
+		var selecNom = document.getElementById('selecNom');
+		selecNom.value = '';
+	}
 
 	function recherche() {
 		var selecNom = document.getElementById('selecNom');
@@ -79,6 +84,7 @@
 	
 	<label for="selecNom">Recherche : </label>
 	<input type="text" name="voitures" list="modeles" id="selecNom" title="Veuillez choisir un nom de voiture" required>
+	<button onclick="document.getElementById('selecNom').value = ''">🗑️</button>
 	<button onclick="recherche()">Ok</button>
 	<span class="error"></span>
 	
