@@ -18,7 +18,7 @@
   
                         // ITERATING THROUGH OBJECTS
                         $.each(data, function (key, value) {
-                          $('#cityname').append(value.name);
+                          $('#cityname').append("<option value=\""+value.name+"\">");
                         });
                           
                     });
