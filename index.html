@@ -18,27 +18,9 @@
   
                         // ITERATING THROUGH OBJECTS
                         $.each(data, function (key, value) {
-  
-                            //CONSTRUCTION OF ROWS HAVING
-                            // DATA FROM JSON OBJECT
-                            student += '<tr>';
-                            student += '<td>' + 
-                                value.id + '</td>';
-  
-                            student += '<td>' + 
-                                value.name + '</td>';
-  
-                            student += '<td>' + 
-                                value.type + '</td>';
-  
-                            student += '<td>' + 
-                                value.desc + '</td>';
-  
-                            student += '</tr>';
+                          $('#cityname').append(value.name);
                         });
                           
-                        //INSERTING ROWS INTO TABLE 
-                        $('#table').append(student);
                     });
                 });
             </script>
@@ -58,6 +40,13 @@
                 <th>GFG Articles</th>
             </tr>
     </section>
+      
+    <input type="text" name="city" list="cityname">
+      <datalist id="cityname">
+        <option value="Boston">
+        <option value="Cambridge">
+      </datalist>
+      
 </body>
   
 </html>
