@@ -8,35 +8,83 @@
     <script src=
 "https://code.jquery.com/jquery-3.5.1.js">
     </script>
-  <script>
-                $(document).ready(function () {
-  
-                    $.getJSON("https://raw.githubusercontent.com/RicoLewis/Luxury-Autos/main/list.json", 
-                            function (data) {
-                        var catalogue = '';
-  
-                        $.each(data, function (key, value) {
-                          $('#modeles').append("<option value=\""+value.nom+"\">");
-                          catalogue += '<tr>';
-                          catalogue += '<td>' + value.nom + '</td>';
-                          catalogue += '<td>' + value.prix + '</td>';
-                          catalogue += '<td>' + value.page + '</td>';
-                          catalogue += '<td>' + value.cat + '</td>';
-                          catalogue += '</tr>';
-                        });
-                      $('#table').append(catalogue);                          
-                    });
-                });
-            </script>
+	<script>
+	const liste = [];
+	$(document).ready(function () {
+		$.getJSON("https://raw.githubusercontent.com/RicoLewis/Luxury-Autos/main/list.json", function (data) {
+			var catalogue = '';
+			var pattern = '';
+			
+	
+			$.each(data, function (key, value) {
+				$('#modeles').append("<option value=\""+value.nom+"\">");
+				catalogue += '<tr' + ' id=\"' + value.nom +'\"' + '>';
+				catalogue += '<td>' + value.nom + '</td>';
+				catalogue += '<td>' + value.prix + '</td>';
+				catalogue += '<td>' + value.page + '</td>';
+				catalogue += '<td>' + value.cat + '</td>';
+				catalogue += '</tr>';
+				if (pattern == '') pattern += value.nom;
+				else pattern += '|' + value.nom;
+				liste.push(value.nom);
+			});
+			$('#table').append(catalogue);
+			$("#selecNom").attr('pattern', pattern);
+		});
+    });
+
+	$(document).keypress(
+	function(event){
+		if (event.which == '13') {
+			event.preventDefault();
+		}
+	});
+
+	function recherche() {
+		var selecNom = document.getElementById('selecNom');
+		var table = document.getElementById('table');
+		var error = document.querySelector('.error');
+	
+		if (selecNom.validity.valid){
+			error.innerHTML = "";
+			error.className = "error";
+			var y = 0;
+			for (var i in liste) {
+				if (liste[i] != selecNom.value) {
+					hideRow(liste[i]);
+				}
+			}
+		}
+		else {
+			error.innerHTML = "Sasie incorrecte!";
+			error.className = "error active";
+		}
+		
+	};
+	
+	function hideRow(id) {
+      var row = document.getElementById(id);
+      row.style.display = 'none';
+    }
+
+	</script>
 </head>
   
 <body>
-  
-  Recherche : <input type="text" name="voitures" list="modeles">
-  <datalist id="modeles">
-  </datalist>
-  <br>
-  <table id='table'>
+	
+	<label for="selecNom">Recherche : </label>
+	<input type="text" name="voitures" list="modeles" id="selecNom" title="Veuillez choisir un nom de voiture" required>
+	<button onclick="recherche()">Ok</button>
+	<span class="error"></span>
+	
+	
+	<datalist id="modeles">
+	</datalist>
+	
+	
+	<br><br><br>
+	
+	<table id='table'>
     <tr>
       <th>Nom</th>
       <th>Prix</th>
