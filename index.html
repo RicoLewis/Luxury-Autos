@@ -10,6 +10,10 @@
     </script>
 	<script>
 	const liste = [];
+	var nom = [];
+	var prix = [];
+	liste.push(nom);
+	liste.push(prix);
 	$(document).ready(function () {
 		$.getJSON("https://raw.githubusercontent.com/RicoLewis/Luxury-Autos/main/list.json", function (data) {
 			var catalogue = '';
@@ -26,7 +30,8 @@
 				catalogue += '</tr>';
 				if (pattern == '') pattern += value.nom;
 				else pattern += '|' + value.nom;
-				liste.push(value.nom);
+				liste[0].push(value.nom);
+				liste[1].push(parseInt(value.prix));
 			});
 			$('#table').append(catalogue);
 			$("#selecNom").attr('pattern', pattern);
@@ -40,12 +45,8 @@
 		}
 	});
 	
-	function clear(){
-		var selecNom = document.getElementById('selecNom');
-		selecNom.value = '';
-	}
 
-	function recherche() {
+	function rechercheNom() {
 		var selecNom = document.getElementById('selecNom');
 		var table = document.getElementById('table');
 		var error = document.querySelector('.error');
@@ -54,15 +55,47 @@
 			error.innerHTML = "";
 			error.className = "error";
 			var y = 0;
-			for (var i in liste) {
-				if (liste[i] != selecNom.value) {
-					hideRow(liste[i]);
+			for (var i in liste[0]) {
+				if (liste[0][i] != selecNom.value) {
+					hideRow(liste[0][i]);
 				}
-				else showRow(liste[i]);
+				else showRow(liste[0][i]);
 			}
 		}
 		else {
-			error.innerHTML = "Sasie incorrecte!";
+			error.innerHTML = "Saisie incorrecte!";
+			error.className = "error active";
+		}
+		
+	};
+	
+	function recherchePrix() {
+		var min = document.getElementById('minimum');
+		var max = document.getElementById('maximum');
+		var table = document.getElementById('table');
+		var error = document.querySelector('.error');
+	
+		if (min.validity.valid && max.validity.valid){
+			error.innerHTML = "";
+			error.className = "error";
+			var minimum = parseInt(min.value);
+			var maximum = parseInt(max.value);
+			if (minimum >= maximum) {
+				error.innerHTML = "Retourne en cours de Math!";
+				error.className = "error active";
+			}
+			else {
+				var y = 0;
+				for (var i in liste[1]) {
+				if (liste[1][i] <= min.value || liste[1][i] >= max.value) {
+					hideRow(liste[0][i]);
+				}
+				else showRow(liste[0][i]);
+			}
+			}
+		}
+		else {
+			error.innerHTML = "Saisie de prix incorrecte!";
 			error.className = "error active";
 		}
 		
@@ -85,11 +118,42 @@
 	<label for="selecNom">Recherche : </label>
 	<input type="text" name="voitures" list="modeles" id="selecNom" title="Veuillez choisir un nom de voiture" required>
 	<button onclick="document.getElementById('selecNom').value = ''">🗑️</button>
-	<button onclick="recherche()">Ok</button>
+	<button onclick="rechercheNom()">Ok</button>
+	<span class="error"></span>
+	<br><br>
+	<label for="minimum">Prix entre : </label>
+	<input type="text" name="prixmin" list="prixmin" id="minimum" pattern="[0-9]{1,6}" size="4" required>
+	<button onclick="document.getElementById('minimum').value = ''">🗑️</button>
+	<label for="minimum"> et : </label>
+	<input type="text" name="prixmax" list="prixmax" id="maximum" pattern="[0-9]{1,6}" size="4" required>
+	<button onclick="document.getElementById('maximum').value = ''">🗑️</button>
+	<button onclick="recherchePrix()">Ok</button>
 	<span class="error"></span>
 	
 	
 	<datalist id="modeles">
+	</datalist>
+	
+	<datalist id="prixmin">
+		<option value="0">
+		<option value="5000">
+		<option value="10000">
+		<option value="25000">
+		<option value="50000">
+		<option value="75000">
+		<option value="100000">
+		<option value="150000">
+		<option value="200000">
+	</datalist>
+	<datalist id="prixmax">
+		<option value="10000">
+		<option value="25000">
+		<option value="50000">
+		<option value="75000">
+		<option value="100000">
+		<option value="150000">
+		<option value="200000">
+		<option value="350000">
 	</datalist>
 	
 	
