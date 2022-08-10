@@ -16,7 +16,7 @@
                         var catalogue = '';
   
                         $.each(data, function (key, value) {
-                          $('#cityname').append("<option value=\""+value.nom+"\">");
+                          $('#modeles').append("<option value=\""+value.nom+"\">");
                           catalogue += '<tr>';
                           catalogue += '<td>' + value.nom + '</td>';
                           catalogue += '<td>' + value.prix + '</td>';
@@ -32,8 +32,8 @@
   
 <body>
   
-  <input type="text" name="city" list="cityname">
-  <datalist id="cityname">
+  <input type="text" name="voitures" list="modeles">
+  <datalist id="modeles">
   </datalist>
   <br>
   <table id='table'>
