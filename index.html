@@ -98,42 +98,20 @@
 			}
 			else {
 				for (var i in liste[1]) {
-					if (liste[1][i] <= min.value || liste[1][i] >= max.value) {
+					if (liste[1][i] <= min.value-1 || liste[1][i] >= max.value) {
 						hideRow(liste[0][i]);
 					}
 					else {
-						
-						
-						if (liste[2][i] == "Compacts" && compacts) {
-							showRow(liste[0][i]);
-						}
-						else if (liste[2][i] == "Coupés" && coupes) {
-							showRow(liste[0][i]);
-						}
-						else if (liste[2][i] == "Muscle" && muscle) {
-							showRow(liste[0][i]);
-						}
-						else if (liste[2][i] == "Off Road" && off_road) {
-							showRow(liste[0][i]);
-						}
-						else if (liste[2][i] == "SUVs" && suvs) {
-							showRow(liste[0][i]);
-						}
-						else if (liste[2][i] == "Sedans" && sedans) {
-							showRow(liste[0][i]);
-						}
-						else if (liste[2][i] == "Sports" && sports) {
-							showRow(liste[0][i]);
-						}
-						else if (liste[2][i] == "Sports Classic" && sports_classic) {
-							showRow(liste[0][i]);
-						}
-						else if (liste[2][i] == "Super" && cat_super) {
-							showRow(liste[0][i]);
-						}
-						else if (liste[2][i] == "Vans" && vans) {
-							showRow(liste[0][i]);
-						}
+						if (liste[2][i] == "Compacts" && compacts) showRow(liste[0][i]);
+						else if (liste[2][i] == "Coupés" && coupes) showRow(liste[0][i]);
+						else if (liste[2][i] == "Muscle" && muscle) showRow(liste[0][i]);
+						else if (liste[2][i] == "Off Road" && off_road) showRow(liste[0][i]);
+						else if (liste[2][i] == "SUVs" && suvs) showRow(liste[0][i]);
+						else if (liste[2][i] == "Sedans" && sedans) showRow(liste[0][i]);
+						else if (liste[2][i] == "Sports" && sports) showRow(liste[0][i]);
+						else if (liste[2][i] == "Sports Classic" && sports_classic) showRow(liste[0][i]);
+						else if (liste[2][i] == "Super" && cat_super) showRow(liste[0][i]);
+						else if (liste[2][i] == "Vans" && vans) showRow(liste[0][i]);
 						else hideRow(liste[0][i]);
 					}
 				}
