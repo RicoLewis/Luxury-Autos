@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <title>NT Luxury Autos</title>
   
-    <!-- INCLUDING JQUERY-->
-    <script src=
-"https://code.jquery.com/jquery-3.5.1.js">
-    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 	<script>
-	const liste = [];
+	var liste = [];
 	var nom = [];
 	var prix = [];
+	var cat = [];
 	liste.push(nom);
 	liste.push(prix);
+	liste.push(cat);
+	
+	
 	$(document).ready(function () {
 		$.getJSON("https://raw.githubusercontent.com/RicoLewis/Luxury-Autos/main/list.json", function (data) {
 			var catalogue = '';
@@ -32,6 +33,7 @@
 				else pattern += '|' + value.nom;
 				liste[0].push(value.nom);
 				liste[1].push(parseInt(value.prix));
+				liste[2].push(value.cat);
 			});
 			$('#table').append(catalogue);
 			$("#selecNom").attr('pattern', pattern);
@@ -43,8 +45,7 @@
 		if (event.which == '13') {
 			event.preventDefault();
 		}
-	});
-	
+	});	
 
 	function rechercheNom() {
 		var selecNom = document.getElementById('selecNom');
@@ -74,6 +75,17 @@
 		var max = document.getElementById('maximum');
 		var table = document.getElementById('table');
 		var error = document.querySelector('.error');
+		
+		var compacts = document.getElementById('compacts').checked;
+		var coupes = document.getElementById('coupes').checked;
+		var muscle = document.getElementById('muscle').checked;
+		var off_road = document.getElementById('off_road').checked;
+		var suvs = document.getElementById('suvs').checked;
+		var sedans = document.getElementById('sedans').checked;
+		var sports = document.getElementById('sports').checked;
+		var sports_classic = document.getElementById('sports_classic').checked;
+		var cat_super = document.getElementById('super').checked;
+		var vans = document.getElementById('vans').checked;
 	
 		if (min.validity.valid && max.validity.valid){
 			error.innerHTML = "";
@@ -85,13 +97,46 @@
 				error.className = "error active";
 			}
 			else {
-				var y = 0;
 				for (var i in liste[1]) {
-				if (liste[1][i] <= min.value || liste[1][i] >= max.value) {
-					hideRow(liste[0][i]);
+					if (liste[1][i] <= min.value || liste[1][i] >= max.value) {
+						hideRow(liste[0][i]);
+					}
+					else {
+						
+						
+						if (liste[2][i] == "Compacts" && compacts) {
+							showRow(liste[0][i]);
+						}
+						else if (liste[2][i] == "Coupés" && coupes) {
+							showRow(liste[0][i]);
+						}
+						else if (liste[2][i] == "Muscle" && muscle) {
+							showRow(liste[0][i]);
+						}
+						else if (liste[2][i] == "Off Road" && off_road) {
+							showRow(liste[0][i]);
+						}
+						else if (liste[2][i] == "SUVs" && suvs) {
+							showRow(liste[0][i]);
+						}
+						else if (liste[2][i] == "Sedans" && sedans) {
+							showRow(liste[0][i]);
+						}
+						else if (liste[2][i] == "Sports" && sports) {
+							showRow(liste[0][i]);
+						}
+						else if (liste[2][i] == "Sports Classic" && sports_classic) {
+							showRow(liste[0][i]);
+						}
+						else if (liste[2][i] == "Super" && cat_super) {
+							showRow(liste[0][i]);
+						}
+						else if (liste[2][i] == "Vans" && vans) {
+							showRow(liste[0][i]);
+						}
+						else hideRow(liste[0][i]);
+					}
 				}
-				else showRow(liste[0][i]);
-			}
 			}
 		}
 		else {
@@ -100,6 +145,36 @@
 		}
 		
 	};
+	
+	document.addEventListener("DOMContentLoaded", function (event) {
+		var tous = document.querySelector('input[name=tous]');
+		tous.addEventListener('change', function (event) {
+			if ($(this).is(':checked')) {
+				document.getElementById('compacts').checked = true;
+				document.getElementById('coupes').checked = true;
+				document.getElementById('muscle').checked = true;
+				document.getElementById('off_road').checked = true;
+				document.getElementById('suvs').checked = true;
+				document.getElementById('sedans').checked = true;
+				document.getElementById('sports').checked = true;
+				document.getElementById('sports_classic').checked = true;
+				document.getElementById('super').checked = true;
+				document.getElementById('vans').checked = true;
+			}
+			else {
+				document.getElementById('compacts').checked = false;
+				document.getElementById('coupes').checked = false;
+				document.getElementById('muscle').checked = false;
+				document.getElementById('off_road').checked = false;
+				document.getElementById('suvs').checked = false;
+				document.getElementById('sedans').checked = false;
+				document.getElementById('sports').checked = false;
+				document.getElementById('sports_classic').checked = false;
+				document.getElementById('super').checked = false;
+				document.getElementById('vans').checked = false;
+			}
+	});
+	});
 	
 	function hideRow(id) {
       var row = document.getElementById(id);
@@ -128,6 +203,18 @@
 	<input type="text" name="prixmax" list="prixmax" id="maximum" pattern="[0-9]{1,6}" size="6" required>
 	<button onclick="document.getElementById('maximum').value = ''">🗑️</button>
 	<button onclick="recherchePrix()">Ok</button>
+	<br><br>
+	<input type="checkbox" id="tous" name="tous" checked><label for="tous">Tous</label><br>
+	<input type="checkbox" id="compacts" name="Compacts" checked><label for="compacts">Compacts</label>
+	<input type="checkbox" id="coupes" name="Cooupés" checked><label for="coupes">Cooupés</label>
+	<input type="checkbox" id="muscle" name="Muscle" checked><label for="muscle">Muscle</label>
+	<input type="checkbox" id="off_road" name="Off Road" checked><label for="off_road">Off Road</label>
+	<input type="checkbox" id="suvs" name="SUVs" checked><label for="suvs">SUVs</label>
+	<input type="checkbox" id="sedans" name="Sedans" checked><label for="sedans">Sedans</label>
+	<input type="checkbox" id="sports" name="Sports" checked><label for="sports">Sports</label>
+	<input type="checkbox" id="sports_classic" name="Sports Classique" checked><label for="sports_classic">Sports Classic</label>
+	<input type="checkbox" id="super" name="Super" checked><label for="super">Super</label>
+	<input type="checkbox" id="vans" name="Vans" checked><label for="vans">Vans</label>
 	<span class="error"></span>
 	
 	
@@ -167,6 +254,5 @@
       <th>Categorie</th>
     </tr>
       
-</body>
-  
+</body>  
 </html>
