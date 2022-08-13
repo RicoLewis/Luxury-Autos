@@ -1164,9 +1164,9 @@
         {
             "nom": "Glendale",
             "prix": "8450",
-            "page": "9/30",,
+            "page": "9/30",
+            "cat": "Sedans",
             "img": "https://zupimages.net/up/22/32/uw65.jpg"
-            "cat": "Sedans"
         },
         {
             "nom": "Ingot",
