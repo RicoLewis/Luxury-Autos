@@ -1,4 +1,4 @@
-<html lang="en">
+<html lang="fr">
   
 <head>
     <meta charset="UTF-8">
@@ -10,9 +10,11 @@
 	var nom = [];
 	var prix = [];
 	var cat = [];
+	var pic = [];
 	liste.push(nom);
 	liste.push(prix);
 	liste.push(cat);
+	liste.push(pic);
 	
 	
 	$(document).ready(function () {
@@ -24,7 +26,7 @@
 			$.each(data, function (key, value) {
 				$('#modeles').append("<option value=\""+value.nom+"\">");
 				catalogue += '<tr' + ' id=\"' + value.nom +'\"' + '>';
-				catalogue += '<td>' + value.nom + '</td>';
+				catalogue += '<td onmouseover="document.getElementById(\'photo\').src = \'' + value.img + '\'">' + value.nom + '</td>';
 				catalogue += '<td>' + value.prix + '</td>';
 				catalogue += '<td>' + value.page + '</td>';
 				catalogue += '<td>' + value.cat + '</td>';
@@ -34,6 +36,7 @@
 				liste[0].push(value.nom);
 				liste[1].push(parseInt(value.prix));
 				liste[2].push(value.cat);
+				liste[3].push(value.img);
 			});
 			$('#table').append(catalogue);
 			$("#selecNom").attr('pattern', pattern);
@@ -224,13 +227,21 @@
 	
 	<br><br><br>
 	
+	
+	
 	<table id='table'>
     <tr>
-      <th>Nom</th>
+      <th onmouseover="document.getElementById('photo').src = 'https://zupimages.net/up/22/32/1d6v.jpg'">Nom</th>
       <th>Prix</th>
       <th>Page</th>
       <th>Categorie</th>
+	  <th>Photo</th>
     </tr>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td rowspan="0" valign="top"><img class="fit-picture" id="photo" style="width: 60%; height: 75%" src="https://zupimages.net/up/22/32/0fut.jpg"></td>
       
 </body>  
 </html>
