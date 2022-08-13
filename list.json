@@ -1,348 +1,367 @@
 [
         {
             "nom": "Blista",
-            "prix": "3 250",
+            "prix": "3250",
             "page": "2/18",
             "cat": "Compacts",
             "img": "https://zupimages.net/up/22/32/0fut.jpg"
         },
         {
             "nom": "Brioso R/A",
-            "prix": "5 200",
+            "prix": "5200",
             "page": "3/18",
             "cat": "Compacts",
             "img": "https://zupimages.net/up/22/32/1d6v.jpg"
         },
         {
             "nom": "Dilettante",
-            "prix": "3 250",
+            "prix": "3250",
             "page": "4/18",
             "cat": "Compacts",
             "img": "https://zupimages.net/up/22/32/lfr8.jpg"
         },
         {
             "nom": "Issi",
-            "prix": "7 500",
+            "prix": "7500",
             "page": "5/18",
             "cat": "Compacts",
             "img": "https://zupimages.net/up/22/32/rty0.jpg"
         },
         {
             "nom": "Issi classique",
-            "prix": "10 400",
+            "prix": "10400",
             "page": "6/18",
             "cat": "Compacts",
             "img": "https://zupimages.net/up/22/32/l4fz.jpg"
         },
         {
             "nom": "Panto",
-            "prix": "4 550",
+            "prix": "4550",
             "page": "7/18",
             "cat": "Compacts",
             "img": "https://zupimages.net/up/22/32/138k.jpg"
         },
         {
             "nom": "Prairie",
-            "prix": "9 000",
+            "prix": "9000",
             "page": "8/18",
             "cat": "Compacts",
             "img": "https://zupimages.net/up/22/32/5hp3.jpg"
         },
         {
             "nom": "Rhapsody",
-            "prix": "5 000",
+            "prix": "5000",
             "page": "9/18",
             "cat": "Compacts",
             "img": "https://zupimages.net/up/22/32/8wlj.jpg"
         },
         {
             "nom": "Weevil",
-            "prix": "33 670",
+            "prix": "33670",
             "page": "10/18",
             "cat": "Compacts",
             "img": "https://zupimages.net/up/22/32/nb7n.jpg"
         },
         {
             "nom": "Weevil custom",
-            "prix": "37 750",
+            "prix": "37750",
             "page": "11/18",
             "cat": "Compacts",
             "img": "https://zupimages.net/up/22/32/dbih.jpg"
         },
         {
             "nom": "Brioso 300",
-            "prix": "17 000",
+            "prix": "17000",
             "page": "12/18",
             "cat": "Compacts",
             "img": "https://zupimages.net/up/22/32/cq1i.jpg"
         },
         {
             "nom": "Club",
-            "prix": "17 500",
+            "prix": "17500",
             "page": "13/18",
             "cat": "Compacts",
             "img": "https://zupimages.net/up/22/32/dgjy.jpg"
         },
         {
             "nom": "Asbo",
-            "prix": "10 920",
+            "prix": "10920",
             "page": "14/18",
             "cat": "Compacts",
             "img": "https://zupimages.net/up/22/32/d4qs.jpg"
         },
         {
             "nom": "Blista Kanjo",
-            "prix": "31 850",
+            "prix": "31850",
             "page": "15/18",
             "cat": "Compacts",
             "img": "https://zupimages.net/up/22/32/auh7.jpg"
         },
         {
             "nom": "Vigero ZX",
-            "prix": "55 000",
+            "prix": "55000",
             "page": "16/18",
             "cat": "Compacts",
             "img": "https://zupimages.net/up/22/32/q72b.jpg"
         },
         {
             "nom": "Brioso 300 large",
-            "prix": "21 500",
+            "prix": "21500",
             "page": "17/18",
             "cat": "Compacts",
             "img": "https://zupimages.net/up/22/32/25fz.jpg"
         },
         {
             "nom": "Ruiner ZZ-8",
-            "prix": "35 000",
+            "prix": "35000",
             "page": "18/18",
             "cat": "Compacts",
             "img": "https://zupimages.net/up/22/32/ec3p.jpg"
         },
         {
             "nom": "Cognoscenti Cabrio",
-            "prix": "52 000",
+            "prix": "52000",
             "page": "2/17",
             "cat": "Coupés",
             "img": "https://zupimages.net/up/22/32/co4z.jpg"
         },
         {
             "nom": "Exemplar",
-            "prix": "39 000",
+            "prix": "39000",
             "page": "3/17",
             "cat": "Coupés",
             "img": "https://zupimages.net/up/22/32/aqef.jpg"
         },
         {
             "nom": "Felon",
-            "prix": "58 500",
+            "prix": "58500",
             "page": "4/17",
             "cat": "Coupés",
             "img": "https://zupimages.net/up/22/32/q0ti.jpg"
         },
         {
             "nom": "Felon GT",
-            "prix": "60 000",
+            "prix": "60000",
             "page": "5/17",
             "cat": "Coupés",
             "img": "https://zupimages.net/up/22/32/mcan.jpg"
         },
         {
             "nom": "Jackal",
-            "prix": "41 600",
+            "prix": "41600",
             "page": "6/17",
             "cat": "Coupés",
             "img": "https://zupimages.net/up/22/32/o9th.jpg"
         },
         {
             "nom": "Oracle XS",
-            "prix": "40 000",
+            "prix": "40000",
             "page": "7/17",
             "cat": "Coupés",
             "img": "https://zupimages.net/up/22/32/8rzk.jpg"
         },
         {
             "nom": "Oracle",
-            "prix": "50 000",
+            "prix": "50000",
             "page": "8/17",
             "cat": "Coupés",
             "img": "https://zupimages.net/up/22/32/j4v7.jpg"
         },
         {
             "nom": "Sentinel XS",
-            "prix": "35 750",
+            "prix": "35750",
             "page": "9/17",
             "cat": "Coupés",
             "img": "https://zupimages.net/up/22/32/n992.jpg"
         },
         {
             "nom": "Sentinel",
-            "prix": "42 900",
+            "prix": "42900",
             "page": "10/17",
             "cat": "Coupés",
             "img": "https://zupimages.net/up/22/32/2chn.jpg"
         },
         {
             "nom": "Windsor",
-            "prix": "84 500",
+            "prix": "84500",
             "page": "11/17",
             "cat": "Coupés",
             "img": "https://zupimages.net/up/22/32/5u6z.jpg"
         },
         {
             "nom": "Windsor Drop",
-            "prix": "110 500",
+            "prix": "110500",
             "page": "12/17",
             "cat": "Coupés",
             "img": "https://zupimages.net/up/22/32/1nva.jpg"
         },
         {
             "nom": "Zion",
-            "prix": "35 000",
+            "prix": "35000",
             "page": "13/17",
             "cat": "Coupés",
             "img": "https://zupimages.net/up/22/32/hxzc.jpg"
         },
         {
             "nom": "Zion Cabrio",
-            "prix": "40 000",
+            "prix": "40000",
             "page": "14/17",
             "cat": "Coupés",
             "img": "https://zupimages.net/up/22/32/mib0.jpg"
         },
         {
             "nom": "Previon",
-            "prix": "70 000",
+            "prix": "70000",
             "page": "15/17",
             "cat": "Coupés",
             "img": "https://zupimages.net/up/22/32/j6f6.jpg"
         },
         {
             "nom": "Kanjo SJ",
-            "prix": "35 000",
+            "prix": "35000",
             "page": "16/17",
             "cat": "Coupés",
             "img": "https://zupimages.net/up/22/32/alr1.jpg"
         },
         {
             "nom": "Postlude",
-            "prix": "47 850",
+            "prix": "47850",
             "page": "17/17",
             "cat": "Coupés",
             "img": "https://zupimages.net/up/22/32/lpvw.jpg"
         },
         {
             "nom": "Blade",
-            "prix": "10 000",
+            "prix": "10000",
             "page": "2/59",
-            "cat": "Muscle"
+            "cat": "Muscle",
+            "img": "https://zupimages.net/up/22/32/fc6q.jpg"
         },
         {
             "nom": "Buccaneer",
-            "prix": "19 500",
+            "prix": "19500",
             "page": "3/59",
-            "cat": "Muscle"
+            "cat": "Muscle",
+            "img": "https://zupimages.net/up/22/32/hodj.jpg"
         },
         {
             "nom": "Buccaneer Custom",
-            "prix": "28 600",
+            "prix": "28600",
             "page": "4/59",
-            "cat": "Muscle"
+            "cat": "Muscle",
+            "img": "https://zupimages.net/up/22/32/0e3z.jpg"
         },
         {
             "nom": "Chino",
-            "prix": "16 900",
+            "prix": "16900",
             "page": "5/59",
-            "cat": "Muscle"
+            "cat": "Muscle",
+            "img": "https://zupimages.net/up/22/32/1464.jpg"
         },
         {
             "nom": "Chino Custom",
-            "prix": "23 400",
+            "prix": "23400",
             "page": "6/59",
-            "cat": "Muscle"
+            "cat": "Muscle",
+            "img": "https://zupimages.net/up/22/32/f9hm.jpg"
         },
         {
             "nom": "Clique",
-            "prix": "24 700",
+            "prix": "24700",
             "page": "7/59",
-            "cat": "Muscle"
+            "cat": "Muscle",
+            "img": "https://zupimages.net/up/22/32/c0ho.jpg"
         },
         {
             "nom": "Coquette BlackFin",
-            "prix": "71 500",
+            "prix": "71500",
             "page": "8/59",
-            "cat": "Muscle"
+            "cat": "Muscle",
+            "img": "https://zupimages.net/up/22/32/s4us.jpg"
         },
         {
             "nom": "Deviant",
-            "prix": "50 000",
+            "prix": "50000",
             "page": "9/59",
-            "cat": "Muscle"
+            "cat": "Muscle",
+            "img": "https://zupimages.net/up/22/32/sni6.jpg"
         },
         {
             "nom": "Dominator",
-            "prix": "39 000",
+            "prix": "39000",
             "page": "10/59",
-            "cat": "Muscle"
+            "cat": "Muscle",
+            "img": "https://zupimages.net/up/22/32/ytdb.jpg"
         },
         {
             "nom": "Dominator GTX",
-            "prix": "55 900",
+            "prix": "55900",
             "page": "11/59",
-            "cat": "Muscle"
+            "cat": "Muscle",
+            "img": "https://zupimages.net/up/22/32/0mw0.jpg"
         },
         {
             "nom": "Dukes",
             "prix": "36400",
             "page": "12/59",
-            "cat": "Muscle"
+            "cat": "Muscle",
+            "img": "https://zupimages.net/up/22/32/091l.jpg"
         },
         {
             "nom": "Faction",
             "prix": "26000",
             "page": "13/59",
-            "cat": "Muscle"
+            "cat": "Muscle",
+            "img": "https://zupimages.net/up/22/32/2m3n.jpg"
         },
         {
             "nom": "Faction Custom",
             "prix": "39000",
             "page": "14/59",
-            "cat": "Muscle"
+            "cat": "Muscle",
+            "img": "https://zupimages.net/up/22/32/3d4q.jpg"
         },
         {
             "nom": "Faction Custom Donk",
             "prix": "45500",
             "page": "15/59",
-            "cat": "Muscle"
+            "cat": "Muscle",
+            "img": "https://zupimages.net/up/22/32/5ndl.jpg"
         },
         {
             "nom": "Ellie",
             "prix": "27300",
             "page": "16/59",
-            "cat": "Muscle"
+            "cat": "Muscle",
+            "img": "https://zupimages.net/up/22/32/uzhf.jpg"
         },
         {
             "nom": "Gauntlet",
             "prix": "39000",
             "page": "17/59",
-            "cat": "Muscle"
+            "cat": "Muscle",
+            "img": "https://zupimages.net/up/22/32/79x4.jpg"
         },
         {
             "nom": "Gauntlet Redwwod",
             "prix": "45500",
             "page": "18/59",
-            "cat": "Muscle"
+            "cat": "Muscle",
+            "img": "https://zupimages.net/up/22/32/4l1q.jpg"
         },
         {
             "nom": "Hermes",
             "prix": "58500",
             "page": "19/59",
-            "cat": "Muscle"
+            "cat": "Muscle",
+            "img": "https://zupimages.net/up/22/32/bvam.jpg"
         },
         {
             "nom": "Hotknife",
             "prix": "143000",
             "page": "20/59",
-            "cat": "Muscle"
+            "cat": "Muscle",
+            "img": "https://zupimages.net/up/22/32/291r.jpg"
         },
         {
             "nom": "Hustler",
