@@ -1,4 +1,4 @@
-<html lang="en">
+<html lang="fr">
   
 <head>
     <meta charset="UTF-8">
@@ -63,7 +63,10 @@
 				if (liste[0][i] != selecNom.value) {
 					hideRow(liste[0][i]);
 				}
-				else showRow(liste[0][i]);
+				else {
+					showRow(liste[0][i]);
+					document.getElementById('photo').src = liste[3][i]
+				}
 			}
 		}
 		else {
